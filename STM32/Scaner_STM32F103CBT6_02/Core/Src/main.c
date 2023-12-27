@@ -69,7 +69,7 @@ UART_HandleTypeDef huart3;
 char trans_str[64] = {0,};
 volatile uint16_t adc[6] = {0,}; // у нас два канала поэтому массив из двух элементов
 
-volatile uint32_t R820T2_freq = 860000000;
+volatile uint32_t R820T2_freq = 1090000000;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
