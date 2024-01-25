@@ -77,6 +77,7 @@ uint32_t BSP_PB_GetState(Button_TypeDef Button)
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -140,7 +141,7 @@ void FileWrite(void)
 				Error_Handler();
 			}
 			else
-			{
+			{ 
 				BSP_LED_On(LED1);
 				res = f_write(&MyFile,wtext,sizeof(wtext),(void*)byteswritten);
 				BSP_LED_Off(LED2);
@@ -282,9 +283,9 @@ int main(void)
 		}
 		else if(Appli_state==APPLICATION_READY)
 		{
-			FileWrite();
-			FileRead();
-			HAL_Delay(500);
+//			FileWrite();
+//			FileRead();
+//			HAL_Delay(500);
 			BSP_LED_On(LED1);
 			BSP_LED_Off(LED2);
 			Appli_state=APPLICATION_IDLE;
