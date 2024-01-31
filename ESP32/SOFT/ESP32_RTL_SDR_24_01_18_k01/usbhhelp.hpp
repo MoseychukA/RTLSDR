@@ -11,6 +11,7 @@ static usb_host_enum_cb_t _USB_host_enumerate;
 
 void _client_event_callback(const usb_host_client_event_msg_t *event_msg, void *arg)
 {
+    ESP_LOGI("", "*** _client_event_callback");
   esp_err_t err;
   switch (event_msg->event)
   {
@@ -64,7 +65,7 @@ void usbh_setup(usb_host_enum_cb_t enumeration_cb)
     .is_synchronous = false,
     .max_num_event_msg = 5,
     .async = {
-        .client_event_callback = _client_event_callback,
+        .client_event_callback = _client_event_callback, // Вызывается только вначале при старте
         .callback_arg = Client_Handle
     }
   };

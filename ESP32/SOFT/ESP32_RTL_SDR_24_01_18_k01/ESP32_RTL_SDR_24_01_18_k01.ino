@@ -331,6 +331,7 @@ void show_config_desc_full(const usb_config_desc_t *config_desc)
 
 void setup()
 {
+    esp_deep_sleep_disable_rom_logging();// подавить загрузочные сообщения
     // поднимаем первый UART
     Serial.begin(115200);
     while (!Serial && millis() < 1000);
