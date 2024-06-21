@@ -38,6 +38,9 @@ void setup()
     Serial.begin(115200);
     Serial.println();
 
+  pinMode(PB1, OUTPUT);                       // Выход на АСУ ТП №1
+  digitalWrite(PB1, HIGH);         // Выход на АСУ ТП №1
+
     Serial.println(F("Start init!"));
 
     tft.init();

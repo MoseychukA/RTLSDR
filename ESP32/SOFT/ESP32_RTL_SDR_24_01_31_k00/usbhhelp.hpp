@@ -20,15 +20,6 @@ void _client_event_callback(const usb_host_client_event_msg_t *event_msg, void *
       err = usb_host_device_open(Client_Handle, event_msg->new_dev.address, &Device_Handle);
       if (err != ESP_OK) ESP_LOGI("", "usb_host_device_open: %x", err);
 
-
-
-
-
-
-
-
-
-
       usb_device_info_t dev_info;
       err = usb_host_device_info(Device_Handle, &dev_info);
       if (err != ESP_OK) ESP_LOGI("", "usb_host_device_info: %x", err);
