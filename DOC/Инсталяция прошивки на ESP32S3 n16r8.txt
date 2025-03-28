@@ -1,0 +1,38 @@
+Перед запуском скриптов сборки установите следующие пакеты (Debian 12):
+
+sudo apt-get install autoconf
+sudo apt-get install automake
+sudo apt-get install bash
+sudo apt-get install bc
+sudo apt-get install bison
+sudo apt-get install build-essential
+sudo apt-get install cmake
+sudo apt-get install flex
+sudo apt-get install gawk
+sudo apt-get install git
+sudo apt-get install gperf
+sudo apt-get install help2man
+sudo apt-get install libncurses-dev
+sudo apt-get install libtool
+sudo apt-get install libtool-bin
+sudo apt-get install libusb-1.0-0
+sudo apt-get install python3
+sudo apt-get install python3-venv
+sudo apt-get install rsync
+sudo apt-get install texinfo
+sudo apt-get install unzip
+sudo apt-get install wget
+
+git clone https://github.com/MoseychukDecima/esp32s3-Linux_nc.git
+cd esp32s3-linux-custom-build
+Запустите скрипт ./rebuild-esp32s3-linux-wifi-mpy-nc.sh.
+или
+
+cd esp32s3-Linux_nc
+Запустите скрипт ./rebuild-esp32s3-linux-wifi.sh.
+
+Вариант
+https://github.com/ESP32DE/Boot-Linux-ESP32S3-Playground/tree/main/_start_here_/medial/howto
+
+https://gojimmypi.github.io/ESP32-S3-Linux/
+

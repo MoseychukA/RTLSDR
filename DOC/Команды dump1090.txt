@@ -2,7 +2,7 @@ ifconfig IP адрес   //Определить IP адрес
 
 sudo raspi-config
 
-https://raspberrypi-ru.com/включить-порт-последовательный-мали/
+https://raspberrypi-ru.com/включить-порт-последовательный-мали
 откройте терминал на Raspberry Pi напрямую или через SSH, затем выполните команду sudo raspi-config 
 для доступа к инструменту управления конфигурацией Raspberry.
 
@@ -12,11 +12,11 @@ ls -la /dev/tty*   //Определить КОМ порт адрес
 ls /dev/tty*
 dmesg | grep tty
 ls -l /dev/serial*
-/*Нужно удалить строку
-console=tty1 - удалил из файла 
-cd /boot/cmdline.txt
-sudo nano cmdline.txt
 
+cd /boot/firmware/
+sudo nano cmdline.txt
+/*Нужно удалить строку
+console=tty1 - удалил из файла
 
 sudo apt-get update 
 sudo apt-get upgrade -y
@@ -28,6 +28,8 @@ sudo apt-get install build-essential
 
 git clone https://github.com/promavto/rtl-sdr.git
 #git clone http://git.osmocom.org/rtl-sdr.git
+#git clone https://github.com/promavto/rp2040-rtl-sdr.git
+
 
 cd rtl-sdr
 mkdir build
@@ -97,9 +99,6 @@ sudo /etc/init.d/dump1090.sh start
  
 ./dump1090/dump1090 --net
 ./dump1090/dump1090 --interactive --net
-#./dump1090/dump1090 --interactive --net --raw
- 
-
 
 
 #git clone https://github.com/promavto/dump10901.git
@@ -121,9 +120,7 @@ sudo /etc/init.d/dump1090.sh start
 "--net-ro-rate <rate>     TCP raw output memory flush rate (default: 0)\n"
 
 
-
 //=============================== Конец ==============================================
-
 
 // файл автоматического запуска программы
 
@@ -202,9 +199,7 @@ case "$1" in
 esac
 exit 0
 
-
-
-
+====== Конец файла
 
 
 sudo apt-get install libncurses5-dev
